@@ -14,10 +14,8 @@ h1{
     font-family: 'Helvetica neue', 
     Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
     font-size: 35px;
-    margin-right:auto;
-    margin-left:25%;
     margin-bottom:13px;
-    width:fit-content; 
+    width:fit-content;  
 }
 #add-icon{
     font-size: 15px;
@@ -40,6 +38,22 @@ h1{
     z-index:9000;
 
 }
+.search{
+    display: none;
+    position: absolute;
+    transform: translate(779px);
+    margin-top: 324px;
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+#search-icon{
+    position: absolute;
+    transform: translate(930px);
+    margin-top: 324px;
+    color: #787878;
+    cursor: pointer;
+    font-size: 20px;
+}
 #add-book{
     display: none;
   
@@ -58,8 +72,6 @@ h1{
     height:fit-content;
     background-color:white;
     padding:15px;
- 
-    
 }
 .form > input{
     align-self: flex-start;
@@ -67,6 +79,9 @@ h1{
     width: 96%;
     background-color: #d8d0d0;
     border-style: none;
+}
+.form > input[type=radio]{
+    width: fit-content;
 }
 .form > select{
     margin:10px;
@@ -117,13 +132,21 @@ h1{
     color:red ;
 }
 
-
+.scroller {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-color:  var(--pcolor) transparent;
+    scrollbar-width: thin;
+  }
+  
+  
 
 .content-container{
     display: flex;
     flex-direction: column;
     width: 964px;
-    height:800px;
+    min-height:800px;
     align-content: flex-start;
     margin:auto;
     border-style: solid;
@@ -135,10 +158,38 @@ h1{
 .image-block{
     width:97%;
     height:300px;
-    background-image: url(logo.PNG);
+    color:white;
+    background-color: var(--pcolor);
     align-self: center;
     margin-top:14px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+h3{
+    font-family: 'Helvetica neue', 
+    Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 25px;
+
+}
+.image-block > h2{
+    font-family: 'Helvetica neue', 
+    Helvetica, "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size:55px;
+    margin:0px;
+    font-weight: bold;
+
+}
+.image-block > h3:first-child{
+    margin-top: auto;
+    margin-bottom: 7px;
+}
+.image-block > h3:last-child{
+    margin-bottom: auto;
+    margin-top: 7px;
+
 }
 .status-menu{
     display: flex;
@@ -189,7 +240,7 @@ h1{
 }
 .status-bar{
     height: 78px;
-    background-color: green;
+  
 }
 table{
     width:97.1%;
@@ -197,6 +248,7 @@ table{
     border-width: thin;
     margin: auto;
     margin-top:0px;
+    margin-bottom: 15px;
     font-family: Verdana, Arial;
     font-size: 11px;
     border-color:rgb(233, 230, 230);
@@ -209,12 +261,16 @@ th{
     border-right: solid;
     border-color:rgb(186, 182, 182);
     border-width: thin;
-    padding: 10px;  
+    padding: 10px; 
+    cursor: pointer; 
 }
 th:last-child{
     border-style: none;
 }
-
+.sortable:hover{
+    cursor: pointer;
+    color: var(--pcolor);
+}
 tr{
   border-bottom:solid;
   border-width: thin;
@@ -242,9 +298,13 @@ tr:first-child{
     color:var(--pcolor);
     font-weight: bold;
     font-size:12px;
+    height: 70px;
+    display: flex;
+    align-items: center;
 }
+
 .data-title > a{
-    margin-left:60%;
+   margin-left:auto;
     text-decoration: none;
     cursor: pointer;
 }
@@ -254,6 +314,7 @@ tr:first-child{
 .data-title > span{
     color: grey;
     font-size:10px;
+    margin-left:5px;
 }
 .data-stats{
     text-align: center;
@@ -265,5 +326,8 @@ tr:first-child{
     height:68px;
  
 }
-
+@keyframes slide{
+ from {width: 0px;}
+ to{width:141px}
+}
 

@@ -9,7 +9,8 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>MyBookList</h1>
+   
+        
         <div class='modal' id='modal'>
             <form class="form" id="add-book">
                 <i class="fas fa-times" id="add-exit"></i>
@@ -74,8 +75,14 @@
                 </select>
                 <label>Pages Read</label>
                 <input type="number" min="0">
+                <label>Status?</label>
+                <select>
+                    <option>Reading</option>
+                    <option>Dropped</option>
+                    <option>On Hold</option>
+                    <option>Plan to Read</option>
+                </select>
                 <button id="change-btn">Change</button>
-                
                 <input type="hidden">
             </form>
            
@@ -83,33 +90,42 @@
             </div>
            
         </div>
-        
+        <div style="width: 970px; margin-left:auto;margin-right:auto">
+            <h1>MyBookList</h1>
         <div class="content-container"> 
-            <div class="image-block"></div>
-            <div class="status-menu" id="menu">
-                <a href="" class="active-link">All Manga</a>
-                <a href="">Currently Reading</a>
-                <a href="">Completed</a>
-                <a href="">On Hold</a>
-                <a href="">Dropped</a>
-                <a href="">Plan to Read</a>
+            <div class="image-block">
+                <h3>Organize, Discuss, Discover</h3>
+                <h2>MyBookList</h2>
+                <h3> How Many Books Have You Read?</h3>
             </div>
+            <div class="status-menu" id="menu">
+                <a href="" class="active-link" id="0">All Books</a>
+                <a href="" id="1">Currently Reading</a>
+                <a href="" id="2">Completed</a>
+                <a href="" id="3">On Hold</a>
+                <a href="" id="4">Dropped</a>
+                <a href="" id="5">Plan to Read</a>
+            </div>
+            <input type="text" placeholder="search" id="search" class="search">
+            <i id='search-icon' class="fas fa-search"></i>
             <div class="filter-sort">
                 <i class="fas fa-plus-square" id="add-icon"></i> 
-                <span>Currently Reading</span>
+                <span id='showing'>All Books</span>
+               
             </div>
             <table>
                 <tr style="background-color: rgb(233, 230, 230);">
                     <th class="header-status"></th>
                     <th class="header-stats">#</th>
                     <th class="header-image">Image</th>
-                    <th class="header-title">Book Title</th>
-                    <th class="header-stats">Score</th>
-                    <th class="header-stats">Pages</th>
-                    <th class="header-stats">Priority</th>
+                    <th class="header-title sortable" id='1'>Book Title <i class="fas fa-sort"></i></th>
+                    <th class="header-stats sortable" id='2'>Score <i class="fas fa-sort"></i></th>
+                    <th class="header-stats sortable" id='3'> Pages <i class="fas fa-sort"></i></th>
+                    <th class="header-stats sortable" id='4'>Priority <i class="fas fa-sort"></i></th>
                 </tr>
             </table>
         </div>
+    </div>
        
     </body>
 </html>
