@@ -244,8 +244,7 @@ tr:first-child{
     font-size:12px;
 }
 .data-title > a{
-    display: table;
-    margin-left:auto;
+    margin-left:60%;
     text-decoration: none;
     cursor: pointer;
 }
