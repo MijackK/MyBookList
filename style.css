@@ -45,7 +45,7 @@ h1{
   
 }
 #edit-book-div{
-    display: flex;
+    display: none;
     flex-direction: column; 
     justify-content: center; 
 }
@@ -59,7 +59,6 @@ h1{
     background-color:white;
     padding:15px;
  
-
     
 }
 .form > input{
