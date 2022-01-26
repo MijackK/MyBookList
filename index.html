@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyBookList</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="script.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>MyBookList</h1>
+        <div class='modal' id='modal'>
+            <form class="form" id="add-book">
+                <i class="fas fa-times" id="add-exit"></i>
+                <label>Thumbnail(URL)</label>
+                <input type="text">
+                <label>Title</label>
+                <input type="text">
+                <label>Author</label>
+                <input type="text">
+                <label>Score</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+                <label>Pages</label>
+                <input type="number" min='0'>
+                <label>Priority</label>
+                <select>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+                <button id="add-btn" >Add Book</button>
+            </form>
+            <div id="edit-book-div">
+            <form class="form" id="edit-book">
+                <i class="fas fa-times" id="edit-exit"></i>
+                <label>Thumbnail(URL)</label>
+                <input type="text">
+                <label>Title</label>
+                <input type="text">
+                <label>Author</label>
+                <input type="text">
+                <label>Score</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+                <label>Pages</label>
+                <input type="number" min='0'>
+                <label>Priority</label>
+                <select>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+                <label>Pages Read</label>
+                <input type="number" min="0">
+                <button id="change-btn">Change</button>
+                
+                <input type="hidden">
+            </form>
+           
+                <button id="delete-btn">Delete</button>
+            </div>
+           
+        </div>
+        
+        <div class="content-container"> 
+            <div class="image-block"></div>
+            <div class="status-menu" id="menu">
+                <a href="" class="active-link">All Manga</a>
+                <a href="">Currently Reading</a>
+                <a href="">Completed</a>
+                <a href="">On Hold</a>
+                <a href="">Dropped</a>
+                <a href="">Plan to Read</a>
+            </div>
+            <div class="filter-sort">
+                <i class="fas fa-plus-square" id="add-icon"></i> 
+                <span>Currently Reading</span>
+            </div>
+            <table>
+                <tr style="background-color: rgb(233, 230, 230);">
+                    <th class="header-status"></th>
+                    <th class="header-stats">#</th>
+                    <th class="header-image">Image</th>
+                    <th class="header-title">Book Title</th>
+                    <th class="header-stats">Score</th>
+                    <th class="header-stats">Pages</th>
+                    <th class="header-stats">Priority</th>
+                </tr>
+            </table>
+        </div>
+       
+    </body>
+</html>
