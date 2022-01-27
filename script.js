@@ -147,8 +147,10 @@ let sortBook = (choice) =>{
 }
 
 let searchBook = (find) =>{
-  myLibraryFiltered = myLibraryFiltered.filter(element => element.title.includes(find));
+  let temporaryHolder = myLibraryFiltered;
+  myLibraryFiltered = myLibraryFiltered.filter(element => element.title.toLowerCase().includes(find.toLowerCase()));
   displayBook();
+  myLibraryFiltered = temporaryHolder;
 
 }
 
