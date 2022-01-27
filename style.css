@@ -22,8 +22,22 @@ h1{
     align-self: center;
     width:3%;
     cursor: pointer;
+    bottom:0;
 }
-
+footer{
+    font-size: 19px;
+    color: #787878;
+    margin-top:15px;
+    text-align: center;
+    
+}
+footer >a{
+    text-decoration: none;
+    color: #787878;
+}
+footer >a:hover{
+   color: var(--pcolor);
+}
 .modal{
     display: none;
     position:fixed;
@@ -57,6 +71,8 @@ h1{
 }
 #add-book{
     display: none;
+    margin-top: auto;
+    margin-bottom: auto;
   
 }
 #edit-book-div{
