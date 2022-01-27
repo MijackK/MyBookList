@@ -41,9 +41,10 @@ h1{
 .search{
     display: none;
     position: absolute;
-    transform: translate(779px);
+    transform: translate(820px);
     margin-top: 324px;
     animation-name: slide;
+    width:100px;
     animation-duration: 0.5s;
 }
 #search-icon{
@@ -328,6 +329,6 @@ tr:first-child{
 }
 @keyframes slide{
  from {width: 0px;}
- to{width:141px}
+ to{width:100px}
 }
 
