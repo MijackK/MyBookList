@@ -94,8 +94,8 @@ footer >a:hover{
     align-self: flex-start;
     margin:10px;
     width: 96%;
-    background-color: #d8d0d0;
-    border-style: none;
+    background-color: transparent;
+    border-style:solid;
 }
 .form > input[type=radio]{
     width: fit-content;
@@ -103,8 +103,8 @@ footer >a:hover{
 .form > select{
     margin:10px;
     width: 30%;
-    background-color: #d8d0d0;
-    border-style: none;
+    background-color: transparent;
+    border-style:solid;
 
 }
 .form > label{
